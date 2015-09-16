@@ -168,7 +168,7 @@ cat <<-EOF
 
 EOF
 
-GPPATH=`find $GPSEARCH -name gpfdist | tail -1`
+GPPATH=`find $GPSEARCH -name hawqconfig | tail -1`
 RETVAL=$?
 
 if [ "$RETVAL" -ne 0 ]; then
@@ -181,7 +181,7 @@ if [ ! -x "$GPPATH" ]; then
     exit 1
 fi
 GPPATH=`dirname $GPPATH`
-if [ ! -x $GPPATH/gpinitsystem ]; then
+if [ ! -x $GPPATH/hawq_ctl ]; then
     echo "No mgmt executables found for Greenplum installation in $GPPATH"
     exit 1
 fi
