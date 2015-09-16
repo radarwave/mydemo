@@ -292,7 +292,7 @@ fi
 
 RETURN=$?
 echo "========================================"
-echo "gpinitsystem returned: ${RETURN}"
+echo "hawq init returned: ${RETURN}"
 echo "========================================"
 
 exit ${RETURN}
